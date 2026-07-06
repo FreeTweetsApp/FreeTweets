@@ -51,7 +51,7 @@ doesn't depend on Twitter's blessing. If posts stop loading:
 
 The instance ecosystem has split: some hosts serve RSS but wall their HTML pages, others serve HTML
 but block RSS. FreeTweets fetches **RSS and HTML pages independently**, each from the first instance
-that serves it — so feeds, threads, and engagement counts keep working even when no single instance
+that serves it so feeds, threads, and engagement counts keep working even when no single instance
 offers everything. All requests use the User-Agent **`FreeTweets/1.0 (RSS Reader)`** a plain
 RSS-client agent that passes several anti-bot walls which challenge browser-style agents. Images
 load directly from Twitter's CDN (`pbs.twimg.com`) rather than through the instances' rate-limited
