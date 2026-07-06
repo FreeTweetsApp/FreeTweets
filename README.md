@@ -1,16 +1,13 @@
 # FreeTweets
 
-**A free, open-source, private way to read X (Twitter) — without an account, an algorithm, or
-Twitter watching you back.**
+**A free, open-source, private way to read X (Twitter) — without an account or algorithm.
 
 FreeTweets is a native macOS app for following X/Twitter accounts as a pure, non-algorithmic
-timeline. You choose who to follow; FreeTweets aggregates their posts into one feed and lets *you*
-decide the order — newest or grouped by account. No ranking, no "For You," no engagement math,
-no ads, and no login. Nothing you read is sent anywhere except the request needed to fetch it.
+timeline. You choose who to follow; FreeTweets aggregates their posts into one feed.
+No ranking, no "For You," no engagement math, no ads, and no login.
+Nothing you read is sent anywhere except the request needed to fetch it.
 
-It's built in the same spirit as [FreeTube](https://github.com/FreeTubeApp/FreeTube), the private
-YouTube client: X/Twitter's official app and website exist to serve you an algorithmic feed and
-track everything you do. FreeTweets exists so you can read the people you actually chose to
+FreeTweets exists so you can read the people you actually chose to
 follow, on your own terms, with nothing collected along the way.
 
 ## How it works
@@ -34,7 +31,7 @@ no server, and no telemetry — everything is stored locally in your app prefere
 - **Photos, GIFs, and video** play in-app; media loads straight from Twitter's CDN.
 - **Manual ordering only** — Newest or By account. That's the whole "algorithm."
 - **Search** your timeline by text, name, or handle.
-- **Light / Dark themes**, and circle or squircle profile pictures — your choice.
+- **Light / Dark themes**, and circle or squircle profile pictures.
 - **Configurable Nitter instance** (⌘,), with automatic failover so the app keeps working as
   instances come and go.
 - Clean, native SwiftUI, built for macOS. Click a post to open it on X; right-click to copy.
@@ -42,21 +39,8 @@ no server, and no telemetry — everything is stored locally in your app prefere
 
 ## Screenshots
 
-<img src="screenshots/timeline.png" width="49%" alt="FreeTweets timeline"> <img src="screenshots/thread.png" width="49%" alt="FreeTweets thread view">
-
-## Install / Build & run
-
-FreeTweets isn't notarized or distributed through the App Store — build it yourself from source.
-Requires the Swift toolchain (Xcode or the Command Line Tools). No third-party dependencies.
-
-```bash
-git clone git@github.com:FreeTweetsApp/FreeTweets.git
-cd FreeTweets
-./build.sh          # compiles + packages FreeTweets.app
-open ./FreeTweets.app
-```
-
-Or during development: `swift run`.
+<img src="screenshots/timeline.png" width="49%" alt="FreeTweets unified timeline"> <img src="screenshots/profile.png" width="49%" alt="FreeTweets account profile">
+<img src="screenshots/thread.png" width="49%" alt="FreeTweets in-app thread"> <img src="screenshots/settings.png" width="49%" alt="FreeTweets settings">
 
 ## About Nitter instances (important)
 
@@ -76,26 +60,6 @@ proxies. If an instance requires whitelisting (e.g. `xcancel.com`), email them t
 exact User-Agent. The sidebar shows a ⚠︎ next to any account whose feed is gated or failing, with
 the reason on hover.
 
-## Project layout
-
-```
-Sources/XFeed/
-  XFeedApp.swift            App entry, window, Settings scene
-  ContentView.swift         Sidebar + timeline + sort control + branding
-  ThreadView.swift          In-app conversation reader
-  PostRow.swift             Single post cell, avatars, media grid
-  Lightbox.swift             Full-window photo/video viewer
-  VideoPlayerView.swift      Video stream resolution + playback
-  SettingsView.swift         Instance, theme, and avatar-shape settings
-  FeedStore.swift            State, persistence, fetching, ordering
-  RSSParser.swift            XMLParser-based RSS reader + text/date helpers
-  NitterTimelineParser.swift HTML timeline/thread scraping
-  RichText.swift              Tweet text → clickable AttributedString
-  RemoteImage.swift          Cached, downsampled image loading
-  Models.swift               Account, Post, SortOrder, AppAppearance
-  Resources/free1.png        App branding
-```
-
 ## Contributing
 
 Issues and pull requests are welcome. This is a small, community project, not a company —
@@ -103,13 +67,11 @@ if a Nitter instance breaks something or you want a feature, open an issue.
 
 ## Disclaimer
 
-FreeTweets is not affiliated with, endorsed by, or connected to X Corp. or Twitter in any way.
+FreeTweets is not affiliated with, endorsed by, or connected to X Corp/Twitter in any way.
 It reads publicly available posts through third-party Nitter instances that FreeTweets does not
 operate or control; their availability and reliability are outside this project's control.
 
 ## License
 
 FreeTweets is Free Software, licensed under the
-[GNU Affero General Public License v3.0](LICENSE) or later — the same license family used by
-FreeTube. You are free to use, study, modify, and redistribute it, including running a modified
-version publicly, as long as the source stays available to those who use it.
+[GNU Affero General Public License v3.0](LICENSE). You are free to use, study, modify, and redistribute it, including running a modified version publicly, as long as the source stays available to those who use it.
