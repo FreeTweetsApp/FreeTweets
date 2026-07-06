@@ -13,7 +13,7 @@ follow, on your own terms, with nothing collected along the way.
 ## How it works
 
 FreeTweets never talks to Twitter/X directly and never needs an X account, API key, or login.
-Instead it reads through [Nitter](https://github.com/zedeus/nitter) — an open-source, privacy-respecting front end for Twitter, pulling each followed account's RSS feed and timeline pages for older posts.
+Instead it reads through [Nitter](https://github.com/zedeus/nitter), an open-source, privacy-respecting front end for Twitter, pulling each followed account's RSS feed and timeline pages for older posts.
 Public Nitter instances vary in what they serve at any given time, so FreeTweets fetches feeds and
 timeline pages independently from whichever instance actually serves them, and lets you switch
 instances at any time in Settings.
