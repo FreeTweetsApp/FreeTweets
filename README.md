@@ -34,7 +34,7 @@ no server, and no telemetry, everything is stored locally in your app preference
 - **Configurable Nitter instance**, with automatic failover so the app keeps working as
   instances come and go.
 - Clean, native SwiftUI, built for macOS. Click a post to open it on X; right-click to copy.
-- Follows and settings persist locally between launches — nothing is ever uploaded.
+- Follows and settings persist locally between launches. Nothing is ever uploaded.
 
 ## Screenshots
 
