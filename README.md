@@ -1,6 +1,6 @@
 # FreeTweets
 
-**A free, open-source, private way to read X (Twitter) — without an account or algorithm.
+A free, open-source, private way to read X (Twitter) — without an account or algorithm.
 
 FreeTweets is a native macOS app for following X/Twitter accounts as a pure, non-algorithmic
 timeline. You choose who to follow; FreeTweets aggregates their posts into one feed.
