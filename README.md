@@ -1,10 +1,10 @@
 # FreeTweets
 
-A free, open-source, private way to read X (Twitter) — without an account or algorithm.
+A free, open-source, private way to read X (Twitter) without an account or algorithm.
 
 FreeTweets is a native macOS app for following X/Twitter accounts as a pure, non-algorithmic
 timeline. You choose who to follow; FreeTweets aggregates their posts into one feed.
-No ranking, no "For You," no engagement math, no ads, and no login.
+There is no ranking, "For You,", engagement math, no ads, and no login.
 Nothing you read is sent anywhere except the request needed to fetch it.
 
 FreeTweets exists so you can read the people you actually chose to
@@ -13,14 +13,13 @@ follow, on your own terms, with nothing collected along the way.
 ## How it works
 
 FreeTweets never talks to Twitter/X directly and never needs an X account, API key, or login.
-Instead it reads through [Nitter](https://github.com/zedeus/nitter) — an open-source, privacy-respecting
-front end for Twitter — pulling each followed account's RSS feed and timeline pages for older posts.
+Instead it reads through [Nitter](https://github.com/zedeus/nitter) — an open-source, privacy-respecting front end for Twitter, pulling each followed account's RSS feed and timeline pages for older posts.
 Public Nitter instances vary in what they serve at any given time, so FreeTweets fetches feeds and
 timeline pages independently from whichever instance actually serves them, and lets you switch
 instances at any time in Settings.
 
 None of your follows, settings, or reading history ever leave your Mac. There is no account,
-no server, and no telemetry — everything is stored locally in your app preferences.
+no server, and no telemetry, everything is stored locally in your app preferences.
 
 ## Features
 
@@ -47,13 +46,13 @@ no server, and no telemetry — everything is stored locally in your app prefere
 Nitter instances rate-limit, gate, or disappear over time — that's the tradeoff of a project that
 doesn't depend on Twitter's blessing. If posts stop loading:
 
-1. Open **Settings** (⌘,) and pick a different instance from the menu, or type your own.
+1. Open **Settings** and pick a different instance from the menu, or type your own.
 2. Click **Apply & Refresh**.
 
 The instance ecosystem has split: some hosts serve RSS but wall their HTML pages, others serve HTML
 but block RSS. FreeTweets fetches **RSS and HTML pages independently**, each from the first instance
 that serves it — so feeds, threads, and engagement counts keep working even when no single instance
-offers everything. All requests use the User-Agent **`FreeTweets/1.0 (RSS Reader)`** — a plain
+offers everything. All requests use the User-Agent **`FreeTweets/1.0 (RSS Reader)`** a plain
 RSS-client agent that passes several anti-bot walls which challenge browser-style agents. Images
 load directly from Twitter's CDN (`pbs.twimg.com`) rather than through the instances' rate-limited
 proxies. If an instance requires whitelisting (e.g. `xcancel.com`), email them to whitelist that
